@@ -1,0 +1,8 @@
+build/
+config/
+static/
+test/
+dist/
+src/assets/
+src/libs/
+!src/data/config/

@@ -1,0 +1,50 @@
+@import './_variables.styl';
+
+// 1px边框
+border-line($position = bottom, $color = $borderColor) {
+  position: relative;
+  border: none;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: $color;
+    if ($position == top || ($position == bottom)) {
+      left: 0;
+      {$position}: 0;
+      width: 100%;
+      height: 1px; /* no */
+      transform: scaleY(0.5);
+      transform-origin: 0 $position;
+    } else if ($position == left || ($position == right)) {
+      top: 0;
+      {$position}: 0;
+      height: 100%;
+      width: 1px; /* no */
+      transform: scaleX(0.5);
+      transform-origin: $position 0;
+    }
+  }
+}
+
+// 四周圆角1px边框
+border-radius-line($color = $borderColor, $radius = 0px) {
+  position: relative;
+  border: none;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    border: 1px solid $color; /* no */
+    border-radius: $radius;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+  }
+}

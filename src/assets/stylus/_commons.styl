@@ -1,0 +1,112 @@
+@import './_variables.styl';
+
+// 1px边框
+.border-top-line, .border-right-line, .border-bottom-line, .border-left-line {
+  position: relative;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    transform-origin: 0 0;
+  }
+}
+
+.border-top-line {
+  &:before {
+    border-top: 1px solid $borderColor; /* no */
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform-origin: 0 top;
+  }
+}
+
+.border-right-line {
+  &:after {
+    border-right: 1px solid $borderColor; /* no */
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform-origin: right 0;
+  }
+}
+
+.border-bottom-line {
+  &:after {
+    border-bottom: 1px solid $borderColor; /* no */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transform-origin: 0 bottom;
+  }
+}
+
+.border-left-line {
+  &:before {
+    border-left: 1px solid $borderColor; /* no */
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform-origin: left 0;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-top-line {
+    &:before {
+      width: 200%;
+      transform: scale(0.5) translateZ(0);
+    }
+  }
+  .border-right-line {
+    &:after {
+      height: 200%;
+      transform: scale(0.5) translateZ(0);
+    }
+  }
+  .border-bottom-line {
+    &:after {
+      width: 200%;
+      transform: scale(0.5) translateZ(0);
+    }
+  }
+  .border-left-line {
+    &:before {
+      height: 200%;
+      transform: scale(0.5) translateZ(0);
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .border-top-line {
+    &:before {
+      width: 300%;
+      transform: scale(0.333) translateZ(0);
+    }
+  }
+  .border-right-line {
+    &:after {
+      height: 300%;
+      transform: scale(0.333) translateZ(0);
+    }
+  }
+  .border-bottom-line {
+    &:after {
+      width: 300%;
+      transform: scale(0.333) translateZ(0);
+    }
+  }
+  .border-left-line {
+    &:before {
+      height: 300%;
+      transform: scale(0.333) translateZ(0);
+    }
+  }
+}
+
+// 主体距离顶部的距离
+.page-header-main {
+  margin-top: 40px
+  overflow: scroll
+}

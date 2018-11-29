@@ -1,0 +1,20 @@
+// 路由跳转动画
+
+// 平移滑动
+.router-slide-left-enter, .router-slide-right-leave-to {
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translate3d(30%, 0, 0);
+  transform: translate3d(30%, 0, 0);
+}
+
+.router-slide-left-leave-to, .router-slide-right-enter {
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translate3d(-30%, 0, 0);
+  transform: translate3d(-30%, 0, 0);
+}
+
+.router-slide-left-enter-active, .router-slide-left-leave-active, .router-slide-right-enter-active, .router-slide-right-leave-active {
+  transition: all 0.45s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
