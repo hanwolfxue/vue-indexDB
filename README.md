@@ -1,6 +1,6 @@
 # dbtest
 
-> A Vue.js project
+> indexDB+vue 的Demo
 
 [项目开发说明文档](http://hmap.hand-china.com/hippius-docs/init)
 [hippius-ui文档](http://hmap.hand-china.com/hippius-docs/ui)
