@@ -1,6 +1,6 @@
 # dbtest
 
-> indexDB+vue 的Demo哟
+> indexDB+vue 的Demo
 
 ## Build Setup
 
