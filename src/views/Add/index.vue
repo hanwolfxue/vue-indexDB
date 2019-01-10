@@ -60,10 +60,10 @@ export default {
     }
   },
   created () {
-    console.log('created')
+    console.log('created123456')
   },
   activated () {
-    console.log('active')
+    console.log('active1')
   },
   mounted () {
     this.wrapperHeight = document.documentElement.clientHeight - 40
