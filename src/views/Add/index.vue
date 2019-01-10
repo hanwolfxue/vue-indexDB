@@ -60,7 +60,7 @@ export default {
     }
   },
   created () {
-    console.log('created12345678')
+    console.log('created123456789')
   },
   activated () {
     console.log('active1')
